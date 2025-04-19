@@ -1,16 +1,16 @@
 import React from 'react'
+import Button from './Button'
 
 const Header = () => {
   return (
     <>
-        <nav className='navbar conatiner pt-3 pb-3'>
-            {/* <div className='container-fluid'> */}
-                <a className='navbar-brand text-light'>Stock Prediction Portal</a>
-            {/* </div> */}
+        <nav className='navbar conatiner pt-3 pb-3 px-5'>
+            <a className='navbar-brand text-light'>Stock Prediction Portal</a>
+
             <div>   
-                <a className='btn btn-outline-info'>Login</a>
+                <Button text='Login' class='btn btn-outline-info' />
                 &nbsp;
-                <a className='btn btn-info'>Register</a>
+                <Button text='Register' class='btn btn-info' />
             </div>
         </nav>
     </>
