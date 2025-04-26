@@ -4,10 +4,10 @@ import { Navigate } from 'react-router-dom'
 
 const PublicRoute = ({children}) => {
     const { isLoggedIn } = useContext(AuthContext)
-    return !isLoggedIn ? (
-        children
-      ) : (
+    return isLoggedIn ? (
         <Navigate to="/dashboard" />
+      ) : (
+        children
       )
 }
 

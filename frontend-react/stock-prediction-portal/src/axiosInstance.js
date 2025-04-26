@@ -40,6 +40,7 @@ axiosInstance.interceptors.response.use(
                 originalRequest.headers['Authorization'] = `Bearer ${response.data.access}`
                 return axiosInstance(originalRequest);
             }catch(error){
+                console.log('Token refresh failed');
                 localStorage.removeItem('access_token')
                 localStorage.removeItem('refresh_token')
             }
